@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="MembrosBaptizados.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="conexão.php" method="post">
+        <div class="wrapper">
+            <div class="title">Formulário de registro</div>
+            <div class="form">
+            <div class="input_field">
+                <label for="">NOME COMPLETO</label>
+                   <input type="text" class="input" name="nome">
+                </div>
+            <div class="input_field">
+                <label for="">Número de telefone</label>
+                   <input type="text" class="input" name="number">
+            </div>
+            
+            <div class="input_field">
+                <label for="">Data de nascimento</label>
+                   <input type="date" class="input" name="birth">
+            </div>
+            <div class="input_field">
+                <label for="">E-mail</label>
+                   <input type="text" class="input" name="email">
+            </div>
+            <div class="input_field">
+                <label for="">Gênero</label>
+                   <select name="" id="">
+                    <option value="M" name="gender">Masculino</option>
+                    <option value="F" name="gender" >Feminino</option>
+                   </select>
+            </div>
+           
+            <div class="input_field">
+                <label for="">Função</label>
+                   <select >
+                    <option value="Cooperador" name="função">Cooperador</option>
+                    <option value="Pastor" name="função">Pastor</option>
+                    <option value="Diácono" name="função">Diácono</option>   
+                    <option value="Ancião" name="função">Ancião</option>
+                   </select>
+            </div>
+            <div class="input_field">
+                <label for="">Morada</label>
+                   <textarea class="textarea" name="morada"></textarea>
+            </div>
+            
+        </div>   
+        <CEnter><button class="reg-btn">REGISTRAR</button></CEnter> 
+        </div>
+    </form>
+
+    
+</body>
+</html>
