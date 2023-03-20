@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index1.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login CDF</title>
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>LOGIN</h2>
+            <div class="inputBox">
+                <input type="email" required="required" id="userEmail">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" id="userPassword">
+                <span>password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="">esqueceu a sua palavra passe'?</a>
+            </div>
+            <button type="submit" class="btn" id="signin">Login</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDZZZVZyVf2kBFlsraWzgb-frcL2Im8qxk",
+          authDomain: "novo-test-c620e.firebaseapp.com",
+          projectId: "novo-test-c620e",
+          storageBucket: "novo-test-c620e.appspot.com",
+          messagingSenderId: "165155012476",
+          appId: "1:165155012476:web:94207d8b96cc0f2785aef9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const userEmail = document.getElementById("userEmail");
+        const userPassword = document.getElementById("userPassword");
+        const signin= document.getElementById("signin");
+        
+        // sign in
+
+        const userSignin = async() => {
+            const signinEmail = userEmail.value 
+            const signinPassword = userPassword.value
+
+           signInWithEmailAndPassword(auth, signinEmail, signinPassword )
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+                window.location.assign("index2.html");
+            })
+            .catch((error)=> {
+                const errorCode = error.code
+                const errorMesage = error.message 
+                console.log(errorCode + errorMesage)
+                alert("usuário não autorizado")
+
+            })
+        }
+            // checking auth atate
+            const checkAuthState = async() =>{
+                onAuthStateChanged(auth, user =>{
+                    if(user){
+                        
+                    }else{
+                       
+                    }
+                })
+            }
+
+            const userSignOut = async() =>{
+                await signOut(auth)
+            }
+            checkAuthState();
+            console.log(auth)
+
+        signin.addEventListener('click', userSignin)
+        // signout.addEventListener('click', userSignOut)
+      </script>
+
+<script src="index1.js"></script>
+</body>
+</html>
