@@ -1,0 +1,279 @@
+
+body::-webkit-scrollbar{
+  display: none;
+   /* for chrome and safari */
+}
+body{
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin: 0;
+    padding: 0;
+    background: url(hands-holding-cross-while-praying.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: center;
+    
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#292929 ;
+}
+
+/* ----------loading animation starts here------------ */
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #EFEFFA;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+/* ---------- end of loading animation-------- */
+#signout{
+  margin-top: 2em;
+  float: left;
+  transition: 0.6s;
+}
+
+#signout:hover{
+  cursor: pointer;
+  transform: scale(1.9);
+}
+.container{
+    color:#fff;
+}
+
+.light{
+  float: right;
+  display: flex;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   margin-top: 5px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.registrar{
+    background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff43);
+    margin: -2px -6px;
+    padding:  2px  6px;
+    color: black;
+}
+
+.df{
+    margin: -2px -6px;
+    padding:  2px  6px;
+    background: url();
+}
+
+.intro{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montaga', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.FLOW{
+  display: flex;
+}
+
+.float2{
+    width: 50%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montaga', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
+.float{
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border-right: 1px solid yellow;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montaga', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* CSS */
+.reg-btn{
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+
+
+.reg-btn:hover,
+.reg-btn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.reg-btn:hover {
+  transform: translateY(-2px);
+  transition: 0.1s;
+  background-color: yellow;
+  color: #292929;
+ 
+}
+
+.reg-btn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: black;
+}
+
+.verLista{
+  height: 80vh;
+  text-align: center;
+}
+
+.verLista h1{
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
+#arrow{
+ width: 80px;
+ height: 100px;
+ margin-right: -700px;
+}
+.listaDeMembros{
+  width: 50%;
+  float: right;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Montaga', serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.listaDeNovos{
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border-right: 1px solid yellow;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Montaga', serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}

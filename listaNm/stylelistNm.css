@@ -1,0 +1,87 @@
+
+#sexo, #Funcao,#local{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0.3rem;
+    font-weight: bold;
+    position: relative;
+    right: 4rem;
+    
+}
+#sexo option, #funcao option, #local{
+    font-weight: bold;
+}
+
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.wrapper .form{
+     width: 100%;
+}
+
+.wrapper .form .input_field{
+   margin-bottom: 15px;
+   display: flex;
+   align-items: center; 
+}
+
+.wrapper .form .input_field label{
+    width: 200px;
+    color: #757575 ;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .input_field .input,
+.wrapper .form .input_field .textarea{
+    outline: none;
+    width: 100%;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    
+}
+.wrapper .form .input_field .textarea{
+    height: 125px;
+    resize: none;
+}
+
+.wrapper .form .input_field .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrapper .form .input_field .custom_select select{
+        border: 1px solid #d5dbd9;
+        appearance: none;
+        -webkit-appearance: none;
+        height: 100%;
+        width: 100%;
+        padding: 8px 10px;
+        border-radius: 3px;
+        outline: none;
+
+}
+
+.wrapper .form .input_field .custom_select::before{
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+border: 8px solid ;
+border-color:  rgb(#d5dbd9 transparent, transparent, transparent);
+
+}
+.wrapper .form .input_field .input:focus{
+    border: ipx solid #fec107;
+}
