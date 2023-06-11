@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat CDF</title>
+  <link href="/home/logo_ADPM-removebg.png" rel="icon">
+  <link rel="stylesheet"  href="messages.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="sidebar">
+      <!-- Sidebar content -->
+    </div>
+    <div class="chat-content">
+      <div class="chat-header">
+        <h2>CHAT C.D.F</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages will be displayed here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <i class="fa-regular fa-file" id="file-icon"></i>
+        <i class="fa-solid fa-paper-plane" id="send-button"></i>
+      </div>
+      <!-- Hidden file input element -->
+      <div class="file-attach">
+          <div class="files">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="file_name"></span>
+          </div>
+      </div>
+      <input type="file" id="image-input">
+      <button id="send-image-button">Send Image</button>
+      <input type="file" id="file-input" style="display: none">
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a44fb1f0d1.js" crossorigin="anonymous"></script>
+  <script type='module' src="index.js"></script>
+  <script>
+    // Add event listener to file icon
+    const fileIcon = document.getElementById('file-icon');
+    const fileName = document.getElementById('file_name');
+
+    const fileInput = document.getElementById('file-input');
+    const messageInput = document.getElementById('message-input');
+
+    fileIcon.addEventListener('click', () => {
+      fileInput.click(); // Programmatically trigger file input click
+    });
+    // Update input value with selected file's name
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        const fileName = fileInput.files[0].name;
+        fileName.innerHTML = fileName;
+      }
+    });
+  </script>
+</body>
+</html>

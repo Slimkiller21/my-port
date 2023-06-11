@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: none;
+}
+
+.chat-content {
+  flex: 1;
+background: url(/home/hands-holding-cross-while-praying.jpg);
+background-size: cover;
+}
+
+.chat-header {
+  background-color: #1f3867;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-messages {
+  height: calc(100vh - 200px);
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.chat-input {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 5rem;
+  gap: 20px;
+}
+
+.chat-input input[type="text"] {
+  padding: 8px;
+  border: none ;
+  border-radius: 5px;
+  background-color: #f4f2f2;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  background-color: #1f3867;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+}
+
+/* Chat message styles */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message-container .message {
+  background-color: #f1f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}/* Add your existing styles here */
+
+#message-input{
+  width: 90%;
+}
+.message {
+  display: block;
+  clear: both;
+}
+
+.files{
+  width: 50px;
+  height: 50px;
+}
+
+.sent{
+  position: relative;
+  align-self: flex-end;
+  background-color: #1f3867;
+  color: #fff;
+  width: fit-content;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  max-width: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+.sent {
+ float: right;
+}
+
+.received{
+float: left;
+position: relative;
+background-color: #e4e6eb;
+color: #000;
+width: fit-content;
+margin: 20px;
+padding: 20px;
+border-radius: 15px;
+font-weight: bold;
+}
+
+.message-container .message.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message-container .message.received {
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .chat-content {
+    width: 100%;
+  }
+}
+
+i{
+  transform: scale(1.5);
+  cursor: pointer;
+
+}
+
+.file-attach{
+  width: 81.9%;
+  height: 5em;
+  background-color: #f4f2f2;
+  position: relative;
+  top: -8.5em;
+  left: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  visibility: hidden;
+}
+.files{
+  width:128px ;
+  padding: 10px;
+  height: 48px; 
+  background-color: #e4e6eb;
+  font-size: 1.2em;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.file_name{
+  width:70px ;
+  height: 39px; 
+}
+.profPic{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 2px  solid red;
+}
