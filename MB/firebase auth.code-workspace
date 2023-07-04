@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../firebase auth"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../form practice/light animated form"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "index"
+	}
+}
