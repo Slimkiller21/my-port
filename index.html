@@ -1,21 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/home/logo_ADPM-removebg.png" rel="icon">
+  <title>CDF - Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Headland+One&family=Merriweather&family=Yesteryear&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/ruang-admin.css">
 </head>
-<body>
-    <p id="par-el">0</p>
-    <button onclick="start()">start</button>
-    <script>
-        let parEl = document.getElementById('par-el')
-        let count = ['selmar','ju']
-        function start(){
-            
-            parEl.innerText = "selmar ${count}"
-        }
-    </script>
+
+<body id="page-top">
+  <div id="wrapper">
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <div class="sidebar-brand-text mx-3">Centro Deus Forte</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+      <span>Registrar</span> 
+      </div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="registromb.html" >
+          <span>MEMBROS BAPTIZADOS</span>
+        </a>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="registronmb.html" >
+          <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+          <span>MEMBROS RECÉM CONVERTIDOS</span>
+        </a>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fas fa-fw fa-table"></i>
+          <span>TABELAS</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="tabelamb.html">MEMBROS BAPTIZADOS</a>
+            <a class="collapse-item" href="tabelanmb.html">RECÉM - CONVERTIDOS</a>
+          </div>
+        </div>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+       SETORES E GRUPOS
+      </div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/Setores/EVANGELIZAÇÃO/Evangeliz.html" >
+          <span>EVANGELIZAÇÃO</span>
+        </a>
+  
+      <li class="nav-item" >
+        <a class="nav-link collapsed" href="/Setores/MÚSICA/musica.html" >
+          <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+          <span>MÚSICA</span>
+        </a>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="/Setores/juventude/juventude.html" >
+            <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+            <span>JUVENTUDE</span>
+          </a>
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="/Setores/EBD/EBD.html" >
+              <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+              <span>E.B.D</span>
+            </a>
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="/Setores/elifelete/elifelete.html" >
+                <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+                <span>ELIFELETE</span>
+              </a>
+
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="/Setores/eliada/eliada.html" >
+                  <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+                  <span>ELIADA</span>
+                </a>
+              
+                <li class="nav-item">
+                  <a class="nav-link collapsed" href="/Setores/homens/homens.html" >
+                    <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+                    <span>HOMENS</span>
+                  </a>
+                  <li class="nav-item">
+                    <a class="nav-link collapsed" href="/Setores/ligaFem/ligaFem.html" >
+                      <!-- <i class="fab fa-fw fa-wpforms"></i> -->
+                      <span>LIGA FEMININA</span>
+                    </a>
+                  <hr class="sidebar-divider">
+                    <div class="sidebar-heading">
+                    OUTROS
+                    </div>
+                    <li class="nav-item">
+                      <a class="nav-link collapsed" href="/web-start/public/" >
+                        <span>CHAT CDF</span>
+                      </a>
+                      <hr class="sidebar-divider">
+                      <div class="version" id="version-ruangadmin"></div>
+                  </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+        
+          <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="" style="max-width: 60px" id="userImage">
+                <span class="ml-2 d-none d-lg-inline text-white small" id="userName">NOME DO USER</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown" style="width: 100px;">
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="hi">😊OLÁ, <P id="great"></P></h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item " aria-current="page">Dashboard</li>
+            </ol>
+          </div>
+
+          <div class="row mb-3">
+  
+            <!-- New User Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1" >MEMBORS BAPTIZADOS</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="mbCount">0</div>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- New User Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">MÉDIA DE CONVERSÕES</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="medConv">0</div>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                        <span>Desde o último mês</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+       <!-- New User Card Example -->
+       <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Setor de Evangelização</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="evCount">0</div>
+                <div class="mt-2 mb-0 text-muted text-xs">
+                  <span>MEMBROS</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- New User Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">EBD</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="EBDcount">0</div>
+                <div class="mt-2 mb-0 text-muted text-xs">
+                  <span>MEMBROS</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- New User Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Eliada</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="ELIADAcount">0</div>
+                <div class="mt-2 mb-0 text-muted text-xs">
+                  <span>MEMBROS</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- New User Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Setor de Homens</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="Homenscount">0</div>
+                <div class="mt-2 mb-0 text-muted text-xs">
+                  <span>MEMBROS</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- New User Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Setor da juventude</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="Juventudecount">0</div>
+                <div class="mt-2 mb-0 text-muted text-xs">
+                  <span>MEMBROS</span>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- New User Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-uppercase mb-1">Mamãs</div>
+              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="Mamascount">0</div>
+              <div class="mt-2 mb-0 text-muted text-xs">
+                <span>MEMBROS</span>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-users fa-2x text-info"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- ! text area ---------------------- -->
+          <!-- Modal Logout -->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabelLogout"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                  <div class="modal-body">
+                    <p style="color: black;">Cetreza que quer sair?</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">NÃO</button>
+                  <a href="login.html" class="btn btn-primary" id="signout">Sim, quero sair</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  
+        <div class="chart">
+          <canvas id="chart"></canvas>
+        </div>
+        <!---Container Fluid-->
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+   <script type="module" src="js/index.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/ruang-admin.min.js"></script>
+
 </body>
-</html> 
+
+</html>
